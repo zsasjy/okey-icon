@@ -1,0 +1,5 @@
+.pnpm-debug.log
+lib
+dist
+.vscode
+node_modules
