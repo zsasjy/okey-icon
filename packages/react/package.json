@@ -1,13 +1,10 @@
 {
-  "name": "@okey-icon/react",
+  "name": "okey-icon-react",
   "version": "0.0.1",
   "description": "A React SVG Icon Library",
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "es/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "react",
     "icons",
@@ -25,6 +22,9 @@
     "lib",
     "styles"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@types/react": ">=16.0.0",
     "@types/react-dom": ">=16.0.0",
