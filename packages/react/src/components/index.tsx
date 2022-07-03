@@ -154,7 +154,7 @@ export const DEFAULT_ICON_CONFIGS: IIconConfig = {
             innerFillColor: '#43CCF8'
         }
     },
-    prefix: 'i'
+    prefix: 'okey'
 };
 
 // 生成UUID

@@ -1,5 +1,7 @@
 .pnpm-debug.log
 lib
+es
+styles
 dist
 .vscode
 node_modules
