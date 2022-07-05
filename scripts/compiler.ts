@@ -8,7 +8,7 @@ import consola from 'consola';
 import chalk from 'chalk';
 import { promisify } from 'util';
 import prettier from 'prettier'; // 优化svg代码格式
-import { transform } from './utils'
+import { transform, firstTitleCase } from './utils'
 
 // 1. 先检验source中svg 是否有重复名称的、svg名称是否合规(由字母组成允许有_、-等)、如果都OK进入第二步
 // 2. 将source中svg文件名称与react、vue等目录中的svg图片的tsx文件 进行比对没有则生成、有则跳过
@@ -18,11 +18,16 @@ const readDir = promisify(fs.readdir);
 const writeFile = promisify(fs.writeFile);
 
 const SvgIconAll: Record<string , [string, string]> = {};
-const validtorSvgIconName = async () => {
+
+type PackageName = 'react' | 'vue' | 'vue-next'
+const packageName = ['react'] as PackageName[];
+
+
+const validtorSvgIconName = async (): Promise<boolean> => {
     const sourceDir = path.resolve(__dirname, '../source')
     const svgFileOrDirList = await readDir(sourceDir);
 
-    const validSvgName = async (name: string, basepath: string): Promise<Boolean> => {
+    const validSvgName = (name: string, basepath: string) => {
         if(path.extname(name) === ".svg"){
             const bname = path.basename(name,'.svg');
             const svgPath = path.resolve(basepath,name);
@@ -35,25 +40,24 @@ const validtorSvgIconName = async () => {
                 consola.error(`${name}文件名称建议使用小字母 ${svgPath}`);
                 return false;
             }
-            SvgIconAll[bname] = [svgPath, await readFile(svgPath, 'utf8')]
+            SvgIconAll[bname] = [svgPath, fs.readFileSync(svgPath, 'utf8')];
+            return true;
         }
         return true;
     } 
 
     return new Promise((resolve) => {
-        svgFileOrDirList.forEach(async fileOrDir => {
+        svgFileOrDirList.forEach(fileOrDir => {
             const fileOrDirPath = path.resolve(sourceDir,fileOrDir);
             if(fs.statSync(fileOrDirPath).isDirectory()){
-                const svgFileList = await readDir(fileOrDirPath);
+                const svgFileList = fs.readdirSync(fileOrDirPath);
                 svgFileList.forEach(file => {
-                    if(!validSvgName(file,fileOrDirPath)){
-                        resolve(false);
-                    }
+                    const result = validSvgName(file,fileOrDirPath);
+                    !result && resolve(result);
                 })
             }
-            if(!validSvgName(fileOrDir,sourceDir)){
-                resolve(false);
-            }
+            const result =  validSvgName(fileOrDir,sourceDir);
+            !result && resolve(result);
             if(svgFileOrDirList[svgFileOrDirList.length - 1] === fileOrDir){
                 resolve(true)
             }
@@ -62,23 +66,23 @@ const validtorSvgIconName = async () => {
 }
 
 // 将svg转为tsx
-const converter = async (name: 'vue' | 'react') => {
+const converter = async (name: PackageName) => {
     try{
-        const assetsPaths = path.resolve('packages',name,'src/assets');
+        const assetsPaths = path.resolve('packages',name,'src/assets/');
         const svgTsxList = await (await readDir(assetsPaths)).reduce((prev, cur: string) => {
-            prev[cur] = true;
+            prev[path.basename(cur,'.tsx').toLocaleLowerCase()] = true;
             return prev;
         }, {} as Record<string, boolean>);
         Object.keys(SvgIconAll).forEach(async file => {
             if(!svgTsxList[file]){
                 const svgString = SvgIconAll[file][1];
-                const svgContent = transform[name](svgString);
-                const targetPath = path.format({
-                    root: assetsPaths,
-                    name: path.basename(file,'.svg'),
-                    ext: '.tsx'
-                })
-                await writeFile(targetPath, svgContent, 'utf-8');
+                const svgContent = transform[`${name}`](svgString);
+                // const targetPath = path.format({
+                //     dir: assetsPaths,
+                //     name: firstTitleCase(file),
+                //     ext: '.tsx'
+                // })
+                // await writeFile(targetPath, svgContent, 'utf-8');
             }
         })
     }catch(err) {
@@ -86,5 +90,13 @@ const converter = async (name: 'vue' | 'react') => {
     }
 }
 
-converter('react');
-// validtorSvgIconName 成功后转换
+async function compiler () {
+    const valid = await validtorSvgIconName();
+    if(valid){
+        packageName.forEach(p => {
+            converter(p as 'react' | 'vue');
+        })
+    }
+}
+
+compiler();
