@@ -1,3 +1,4 @@
+import prettier from 'prettier'; // 优化svg代码格式
 export * from './tools'
 
 function svgTransformVue(content: string): string{

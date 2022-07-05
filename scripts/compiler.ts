@@ -7,7 +7,6 @@ import mkdirp from 'mkdirp';
 import consola from 'consola';
 import chalk from 'chalk';
 import { promisify } from 'util';
-import prettier from 'prettier'; // 优化svg代码格式
 import { transform, firstTitleCase } from './utils'
 
 // 1. 先检验source中svg 是否有重复名称的、svg名称是否合规(由字母组成允许有_、-等)、如果都OK进入第二步
@@ -94,7 +93,7 @@ async function compiler () {
     const valid = await validtorSvgIconName();
     if(valid){
         packageName.forEach(p => {
-            converter(p as 'react' | 'vue');
+            converter(p);
         })
     }
 }
