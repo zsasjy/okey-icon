@@ -75,7 +75,7 @@ const converter = async (name: PackageName) => {
         Object.keys(SvgIconAll).forEach(async file => {
             if(!svgTsxList[file]){
                 const svgString = SvgIconAll[file][1];
-                const svgContent = transform[`${name}`](svgString);
+                const svgContent = await transform[`${name}`](svgString);
                 // const targetPath = path.format({
                 //     dir: assetsPaths,
                 //     name: firstTitleCase(file),

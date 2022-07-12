@@ -3,3 +3,26 @@ export const firstTitleCase = (str: string): string => {
         ? str.slice(0,1).toUpperCase() + str.slice(1)
         : '';
 }
+
+export const SvgoPlugins = [
+    {
+        name: 'convertColors',
+        params: { currentColor: /^(?!url|none)./ },
+    },
+    {
+        name: 'cleanupListOfValues',
+        active: true,
+    },
+    {
+        name: 'removeStyleElement',
+        active: true,
+    },
+    {
+        name: 'removeViewBox',
+        active: false,
+    },
+    {
+        name: 'removeDimensions',
+        active: true,
+    },
+]
