@@ -7,7 +7,7 @@ import mkdirp from 'mkdirp';
 import consola from 'consola';
 import chalk from 'chalk';
 import { promisify } from 'util';
-import { transform, firstTitleCase } from './utils'
+import { transforms, firstTitleCase } from './utils'
 
 // 1. 先检验source中svg 是否有重复名称的、svg名称是否合规(由字母组成允许有_、-等)、如果都OK进入第二步
 // 2. 将source中svg文件名称与react、vue等目录中的svg图片的tsx文件 进行比对没有则生成、有则跳过
@@ -75,7 +75,7 @@ const converter = async (name: PackageName) => {
         Object.keys(SvgIconAll).forEach(async file => {
             if(!svgTsxList[file]){
                 const svgString = SvgIconAll[file][1];
-                const svgContent = await transform[`${name}`](svgString);
+                const svgContent = await transforms[`${name}`](svgString, file);
                 // const targetPath = path.format({
                 //     dir: assetsPaths,
                 //     name: firstTitleCase(file),

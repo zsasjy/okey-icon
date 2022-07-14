@@ -48,6 +48,7 @@ importers:
       ts-node: ^10.8.2
       typescript: ^4.7.4
       vue: 2.6.14
+      xml-js: ^1.6.11
     dependencies:
       '@types/react': registry.npmmirror.com/@types/react/18.0.14
       alias-for-vue3: registry.npmmirror.com/vue/3.2.37
@@ -94,6 +95,7 @@ importers:
       svgo: registry.npmmirror.com/svgo/2.8.0
       ts-node: registry.npmmirror.com/ts-node/10.8.2_qiyc72axg2v44xl4yovan2v55u
       typescript: registry.npmmirror.com/typescript/4.7.4
+      xml-js: registry.npmmirror.com/xml-js/1.6.11
 
   packages/react:
     specifiers: {}
@@ -7556,7 +7558,6 @@ packages:
     name: sax
     version: 1.2.4
     dev: true
-    optional: true
 
   registry.npmmirror.com/semver-greatest-satisfied-range/1.1.0:
     resolution: {integrity: sha512-Ny/iyOzSSa8M5ML46IAx3iXc6tfOsYU2R4AXi2UpHk60Zrgyq6eqPj/xiOfS0rRl/iiQ/rdJkVjw/5cdUyCntQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/semver-greatest-satisfied-range/-/semver-greatest-satisfied-range-1.1.0.tgz}
@@ -8660,6 +8661,15 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/wrappy/-/wrappy-1.0.2.tgz}
     name: wrappy
     version: 1.0.2
+    dev: true
+
+  registry.npmmirror.com/xml-js/1.6.11:
+    resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/xml-js/-/xml-js-1.6.11.tgz}
+    name: xml-js
+    version: 1.6.11
+    hasBin: true
+    dependencies:
+      sax: registry.npmmirror.com/sax/1.2.4
     dev: true
 
   registry.npmmirror.com/xtend/4.0.2:

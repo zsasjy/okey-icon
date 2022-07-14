@@ -52,7 +52,8 @@
     "prettier": "^2.7.1",
     "svgo": "^2.8.0",
     "ts-node": "^10.8.2",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "xml-js": "^1.6.11"
   },
   "dependencies": {
     "@types/react": ">=16.0.0",
