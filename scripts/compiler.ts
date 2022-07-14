@@ -1,7 +1,7 @@
 /**
  * @file 将source文件下的svg照片、转为.tsx、.vue中
 */
-import fs from 'fs';
+import fs, { writeFileSync } from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
 import consola from 'consola';
@@ -72,16 +72,16 @@ const converter = async (name: PackageName) => {
             prev[path.basename(cur,'.tsx').toLocaleLowerCase()] = true;
             return prev;
         }, {} as Record<string, boolean>);
-        Object.keys(SvgIconAll).forEach(async file => {
+        Object.keys(SvgIconAll).forEach(async (file, index) => {
             if(!svgTsxList[file]){
                 const svgString = SvgIconAll[file][1];
-                const svgContent = await transforms[`${name}`](svgString, file);
-                // const targetPath = path.format({
-                //     dir: assetsPaths,
-                //     name: firstTitleCase(file),
-                //     ext: '.tsx'
-                // })
-                // await writeFile(targetPath, svgContent, 'utf-8');
+                const svgContent = transforms[`${name}`](svgString, file);
+                const targetPath = path.format({
+                    dir: assetsPaths,
+                    name: firstTitleCase(file),
+                    ext: '.tsx'
+                });
+                writeFileSync(targetPath, svgContent, 'utf-8');
             }
         })
     }catch(err) {
