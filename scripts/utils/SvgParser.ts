@@ -4,9 +4,11 @@ import { SvgoPlugins } from './tools'
 
 export class SvgParser {
     private template: Record<string, (content: string) => string>;
+    private lastColor: string; // 记录最后一个的颜色
     constructor(private content: string, private name?: string){
         this.content = content;
         this.name = name || '';
+        this.lastColor = '';
         this.template = {
             'react' : (content: string) => (
                 `
@@ -41,7 +43,9 @@ export class SvgParser {
         if(props.width) props.width = `{props.size}`;
         if(props.height) props.height = `{props.size}`;
         if(props.xmlns) delete props.xmlns;
-        if(props.fill && !isRoot) props.fill = "currentColor";
+        if(props.fill && !isRoot) {
+            props.fill = "{props.colors[1]}";
+        }
         if(props.stroke) props.stroke = `{props.colors[0]}`;
         if(props['stroke-width']) {
             delete props['stroke-width'];
