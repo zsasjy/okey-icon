@@ -4,11 +4,11 @@ import { SvgoPlugins } from './tools'
 
 export class SvgParser {
     private template: Record<string, (content: string) => string>;
-    private lastColor: string; // 记录最后一个的颜色
+    private lastColorCount: number; // 记录最后一个的颜色
     constructor(private content: string, private name?: string){
         this.content = content;
         this.name = name || '';
-        this.lastColor = '';
+        this.lastColorCount = 0;
         this.template = {
             'react' : (content: string) => (
                 `
@@ -39,14 +39,10 @@ export class SvgParser {
             ),
         }
     }
-    private replaceAttr(props: {[key: string]: string}, isRoot: boolean = true) {
+    private replaceAttr(props: {[key: string]: string}, name: string) {
         if(props.width) props.width = `{props.size}`;
         if(props.height) props.height = `{props.size}`;
         if(props.xmlns) delete props.xmlns;
-        if(props.fill && !isRoot) {
-            props.fill = "{props.colors[1]}";
-        }
-        if(props.stroke) props.stroke = `{props.colors[0]}`;
         if(props['stroke-width']) {
             delete props['stroke-width'];
             props['strokeWidth'] = `{props.strokeWidth}`;
@@ -55,13 +51,27 @@ export class SvgParser {
             delete props['stroke-linejoin'];
             props['strokeLinejoin'] = `{props.strokeLinejoin}`;
         }
-        
+        // 为满足变色 单独处理path样式，非path标签 颜色固定 
+        if(props.stroke) props.stroke = `{props.colors[${ this.lastColorCount }]}`;
+        if(props.fill && name !== 'svg') {
+            if(name === 'path'){
+                if(props.stroke){
+                    if(this.lastColorCount < 3) this.lastColorCount += 1;
+                    props.fill = `{props.colors[${this.lastColorCount}]}`;
+                    if(this.lastColorCount < 3) this.lastColorCount += 1;
+                }else{
+                    props.fill = `{props.colors[${this.lastColorCount}]}`;
+                }
+            }else{
+                props.fill = `{props.colors[${this.lastColorCount + 1}]}`;
+            }
+        }
         return props;
     }
     private parser(svgTree: XMLJs.Element | XMLJs.ElementCompact): XMLJs.Element | XMLJs.ElementCompact{
         // 递归遍历树 修改attributes中的width、height、fill、stroke、stroke-width、stroke-linejoin
         for(let i of svgTree.elements){
-            i.attributes = this.replaceAttr(i.attributes, i.name === 'svg');
+            i.attributes = this.replaceAttr(i.attributes, i.name);
             if(i.elements){
                 this.parser(i);
             }
@@ -74,7 +84,7 @@ export class SvgParser {
         // const result = optimize(this.content,SvgoPlugins as OptimizeOptions) as OptimizedSvg;
         // if(result.error) throw new Error(result.error);
         // const SVGjson = XMLJs.xml2js(result.data); // 获取SVG的AST
-        const SVGjson = XMLJs.xml2js(this.content); // 获取SVG的AST
+        const SVGjson = XMLJs.xml2js(this.content);
         const svgTree = this.parser(SVGjson);
         const svgStr = XMLJs.js2xml(svgTree);
         return svgStr.replace(/"{(.+?)}"/ig,($1) => {

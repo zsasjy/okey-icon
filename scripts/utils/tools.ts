@@ -4,6 +4,11 @@ export const firstTitleCase = (str: string): string => {
         : '';
 }
 
+export const name2humps = (name: string): string => {
+    const nameList = name.split('-');
+    return nameList.map(item => firstTitleCase(item)).join('');
+}
+
 export const SvgoPlugins = [
     {
         name: 'convertColors',

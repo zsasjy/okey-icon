@@ -7,7 +7,7 @@ import mkdirp from 'mkdirp';
 import consola from 'consola';
 import chalk from 'chalk';
 import { promisify } from 'util';
-import { transforms, firstTitleCase } from './utils'
+import { transforms, name2humps } from './utils'
 
 // 1. 先检验source中svg 是否有重复名称的、svg名称是否合规(由字母组成允许有_、-等)、如果都OK进入第二步
 // 2. 将source中svg文件名称与react、vue等目录中的svg图片的tsx文件 进行比对没有则生成、有则跳过
@@ -19,7 +19,7 @@ const writeFile = promisify(fs.writeFile);
 const SvgIconAll: Record<string , [string, string]> = {};
 
 type PackageName = 'react' | 'vue' | 'vue-next'
-const packageName = ['react'] as PackageName[];
+const packageName = ['react', 'vue'] as PackageName[];
 
 
 const validtorSvgIconName = async (): Promise<boolean> => {
@@ -68,20 +68,25 @@ const validtorSvgIconName = async (): Promise<boolean> => {
 const converter = async (name: PackageName) => {
     try{
         const assetsPaths = path.resolve('packages',name,'src/assets/');
+        const indexPaths = path.resolve('packages',name, 'src/index.ts');
         const svgTsxList = await (await readDir(assetsPaths)).reduce((prev, cur: string) => {
             prev[path.basename(cur,'.tsx').toLocaleLowerCase()] = true;
             return prev;
         }, {} as Record<string, boolean>);
         Object.keys(SvgIconAll).forEach(async (file, index) => {
+            const filename = name2humps(file)
             if(!svgTsxList[file]){
+                consola.info(`开始编译${name}Svg : ${filename}`);
                 const svgString = SvgIconAll[file][1];
                 const svgContent = transforms[`${name}`](svgString, file);
                 const targetPath = path.format({
                     dir: assetsPaths,
-                    name: firstTitleCase(file),
+                    name: filename,
                     ext: '.tsx'
                 });
                 writeFileSync(targetPath, svgContent, 'utf-8');
+                writeFileSync(indexPaths, `\nexport {default as ${filename}} from './assets/${filename}';`, { flag: 'a+',encoding:'utf-8' });
+                consola.success(`编译 ${name} ${filename}Icon Success, Path: ${targetPath}`);
             }
         })
     }catch(err) {

@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "build": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
-    "c": "ts-node ./scripts/compiler.ts",
-    "changeset": "changeset add"
+    "compiler": "ts-node ./scripts/compiler.ts",
+    "changeset": "changeset add",
+    "start": "pnpm run -C playground start"
   },
   "workspaces": [
     "packages/**"
