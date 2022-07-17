@@ -13,6 +13,7 @@
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
     },
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
   "exclude": [

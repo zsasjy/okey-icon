@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.iconitem {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #FAFAFA;
+    &:hover {
+        transition: all 0.2s linear .05s;
+        z-index: 0;
+        .download {
+            top: 0px;
+            background-color: #FFFFFF;
+            svg {
+                width: 32px;
+            }
+        }
+    }
+    .icon svg{
+        width: 32px;
+        height: 32px;
+    }
+    .text {
+        width: 80px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #999;
+    }
+    .download{
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        z-index: 999;
+        transition: all 0.2s linear .05s;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+        font-weight: 500;
+        color: #999;
+        svg {
+            width: 24px;
+        }
+    }
+}

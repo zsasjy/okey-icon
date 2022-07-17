@@ -3,5 +3,4 @@
 
 # 所有图标
 
-
-Balabala...
+<code src="../components/AllIcon.tsx"></code>
