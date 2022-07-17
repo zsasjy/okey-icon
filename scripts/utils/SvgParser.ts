@@ -43,6 +43,10 @@ export class SvgParser {
         if(props.width) props.width = `{props.size}`;
         if(props.height) props.height = `{props.size}`;
         if(props.xmlns) delete props.xmlns;
+        if(props['stroke-linecap']) {
+            delete props['stroke-linecap'];
+            props['strokeLinecap'] = `{props.strokeLinecap}`;
+        }
         if(props['stroke-width']) {
             delete props['stroke-width'];
             props['strokeWidth'] = `{props.strokeWidth}`;
