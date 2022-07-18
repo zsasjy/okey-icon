@@ -21,8 +21,10 @@
     ]
   },
   "devDependencies": {
+    "@types/react-color": "^3.0.6",
     "dumi": "^1.0.13",
     "lint-staged": "^10.0.7",
+    "lodash.throttle": "^4.1.1",
     "okey-icon-react": "workspace:0.0.1",
     "prettier": "^2.2.1",
     "react": "^18.2.0",
@@ -30,6 +32,7 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "antd": "^4.21.6"
+    "antd": "^4.21.6",
+    "react-color": "^2.19.3"
   }
 }

@@ -13,6 +13,7 @@ export interface IIcon {
     theme?: 'outline' | 'filled' | 'two-tone' | 'multi-color',
     strokeLinecap?: 'butt' | 'round' | 'square',
     strokeLinejoin?: 'miter' | 'round' | 'bevel',
+    fill?: string | string[]
 }
 
 export interface IconProps {
