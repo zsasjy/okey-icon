@@ -7,12 +7,20 @@ import { message } from 'antd';
 import DownloadModal from './DownloadModal';
 import "antd/dist/antd.css"
 
+export interface IIcon {
+    size?: number,
+    strokeWidth?: number,
+    theme?: 'outline' | 'filled' | 'two-tone' | 'multi-color',
+    strokeLinecap?: 'butt' | 'round' | 'square',
+    strokeLinejoin?: 'miter' | 'round' | 'bevel',
+}
+
 export interface IconProps {
     id: number
     title: string,
     name: string,
     svg: string,
-    component: JSX.Element,
+    component: (info?: IIcon) => JSX.Element,
 }
 
 interface IconInfoProps extends IconProps {
@@ -31,7 +39,7 @@ function IconInfo (props: IconInfoProps) {
         <>
             <div className={styles.iconitem}>
                 <div className={styles.icon}>
-                    { props.component }
+                    { props.component() }
                 </div>
                 <div className={styles.text}>{props.title}</div>
                 <div className={styles.download} onClick={() => clickHanel()}><Download />下载</div>
@@ -41,15 +49,15 @@ function IconInfo (props: IconInfoProps) {
     )
 }
 
-const Icons = (props: { name: string }) => {
-    const {name} = props;
+const Icons = (props: { name: string , info?: IIcon }) => {
+    const {name, info} = props;
 
     const Icon = (OkeyIcons as any)[`${name}`];
 
     if(!Icon) {
         return null
     }
-    return <Icon size={32} />
+    return <Icon size={32} {...info} />
 }
 
 export default function IconWrapper () {
@@ -60,7 +68,7 @@ export default function IconWrapper () {
         const iconList = IconConfig.map(item => {
             return {
                 ...item,
-                component: <Icons name={item.componentName}/>
+                component: (info?: IIcon) => <Icons name={item.componentName} info={info}/>
             }
         })
         setData(iconList);
