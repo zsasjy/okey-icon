@@ -3,10 +3,11 @@ import * as OkeyIcons from 'okey-icon-react';
 import IconConfig from 'okey-icon-react/icons.json'
 import Download from './download';
 import styles from './index.module.less';
-import message from 'antd/es/message/index';
+import { message } from 'antd';
+import DownloadModal from './DownloadModal';
 import "antd/dist/antd.css"
 
-interface IconProps {
+export interface IconProps {
     id: number
     title: string,
     name: string,
@@ -19,14 +20,24 @@ interface IconInfoProps extends IconProps {
 }
 
 function IconInfo (props: IconInfoProps) {
+    const [show, setShow] = useState(false);
+
+    const clickHanel = () => {
+        props.onClick && props.onClick(props);
+        setShow(true);
+    } 
+
     return props.component && (
-        <div className={styles.iconitem}>
-            <div className={styles.icon}>
-                { props.component }
+        <>
+            <div className={styles.iconitem}>
+                <div className={styles.icon}>
+                    { props.component }
+                </div>
+                <div className={styles.text}>{props.title}</div>
+                <div className={styles.download} onClick={() => clickHanel()}><Download />下载</div>
             </div>
-            <div className={styles.text}>{props.title}</div>
-            <div className={styles.download} onClick={() => props.onClick && props.onClick(props)}><Download />下载</div>
-        </div>
+            <DownloadModal visible={show} info={props} onValueChange={(v: boolean) => setShow(v)}/>
+        </>
     )
 }
 
@@ -56,16 +67,18 @@ export default function IconWrapper () {
     }, []);
     
     const downloadIcon = (props: IconProps) => {
-        message.info(props.name);
+        // message.info(props.name);
     }
 
     return (
-        <div className={styles.container}>
-            {
-                data.map(item => {
-                    return <IconInfo {...item} key={item.id} onClick={downloadIcon}/>
-                })
-            }
-        </div>
+        <>
+            <div className={styles.container}>
+                {
+                    data.map(item => {
+                        return <IconInfo {...item} key={item.id} onClick={downloadIcon}/>
+                    })
+                }
+            </div>
+        </>
     )
 }
