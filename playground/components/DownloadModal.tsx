@@ -109,7 +109,7 @@ export default function DownloadModal (props: IProps) {
             <Button type="primary" className={styles.btn} onClick={() => copyHandle('react')}>复制React</Button>
             <Button className={styles.btn} onClick={() => copyHandle('vue')}>复制Vue</Button>
             <Button className={styles.btn} onClick={() => copyHandle('svg')}>复制Svg</Button>
-            <Button onClick={() => downloadSvg(info?.svg,`${info?.name}.svg`)}>下载Svg</Button>
+            <Button onClick={() => downloadSvg(info?.svg || '',`${info?.name}.svg`)}>下载Svg</Button>
         </>
     }, [copyHandle])
     
