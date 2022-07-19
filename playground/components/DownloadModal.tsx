@@ -1,30 +1,12 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { IconProps } from './AllIcon';
-import { Modal, Select, InputNumber, Input, Form, Popover, Button } from "antd";
+import { Modal, Select, InputNumber, Input, Form, Popover, Button, message } from "antd";
 import { SketchPicker } from 'react-color';
 import throttle from 'lodash.throttle';
 import styles from './index.module.less';
 import { useCopy } from 'dumi/theme';
+import { obj2str, propEnum, downloadSvg } from './util'
 import "./index.less";
-
-const propEnum = {
-    theme: [
-        { label: '线性', value: 'outline' }, 
-        { label: '填充', value: 'filled' }, 
-        { label: '双色', value: 'two-tone' }, 
-        { label: '多色', value: 'multi-color' }, 
-    ],
-    strokeLinecap: [
-        { label: 'butt', value: 'butt' }, 
-        { label: 'round', value: 'round' }, 
-        { label: 'square', value: 'square' }, 
-    ],
-    strokeLinejoin: [
-        { label: 'miter', value: 'miter' }, 
-        { label: 'round', value: 'round' }, 
-        { label: 'bevel', value: 'bevel' }, 
-    ]
-}
 
 interface IProps {
     visible: boolean;
@@ -40,7 +22,7 @@ function FormItemColor (props: { value:string, onValueChange:(v: string) => void
                 <Input 
                     value={ value }
                     onChange={ throttle((e) => onValueChange && onValueChange(e.target.value),300) }
-                    style={{ width: 130 }}
+                    style={{ width: 120 }}
                     maxLength={ 6 }
                     addonBefore='#'
                 />
@@ -63,7 +45,7 @@ function FormItemColor (props: { value:string, onValueChange:(v: string) => void
 
 export default function DownloadModal (props: IProps) {
     const { visible, info, onValueChange } = props;
-    const [size,setSize] = useState(32);
+    const [size, setSize] = useState(32);
     const [strokeWidth,setStrokeWidth] = useState(4);
     const [copyCode, copyStatus] = useCopy();
     const [theme,setTheme] = useState<'outline' | 'filled' | 'two-tone' | 'multi-color'>('outline');
@@ -104,37 +86,32 @@ export default function DownloadModal (props: IProps) {
     }, [theme, color])
 
     const componentToString = useCallback((type: string) => {
-        const props = { theme, size, fill } as any;
-        if(strokeLinecap !== 'round') props[strokeLinecap] = strokeLinecap;
-        if(strokeLinejoin !== 'round') props[strokeLinejoin] = strokeLinejoin;
-        if(strokeWidth !== 4) props[strokeWidth] = strokeWidth;
-        if(size !== 32) props[size] = size;
-        console.log(props);
-        if(type === 'react'){
-            return ''
-        }
-    }, [ theme, size, fill, strokeWidth, strokeLinecap, strokeLinejoin ])
+        const params = { fill, theme, size } as any;
+        if(strokeLinecap !== 'round') params['strokeLinecap'] = strokeLinecap;
+        if(strokeLinejoin !== 'round') params['strokeLinejoin'] = strokeLinejoin;
+        if(strokeWidth !== 4) params['strokeWidth'] = strokeWidth;
+        if(type === 'react') return `<${info?.componentName}${obj2str(params)} />`
+        if(type === 'vue') return `<${info?.name}${obj2str(params)} />`
+        if(type === 'svg') return `<?xml version="1.0" encoding="UTF-8"?> ${info?.svg}`;
+    }, [ size, fill, theme, strokeWidth, strokeLinecap, strokeLinejoin ])
 
-    const copyHandle = (type: string) => {
-        componentToString(type);
-        // copyCode(`
-        //     <${info?.componentName} 
-        //         size={${size}}
-        //         theme={${theme}}
-        //         strokeWidth={${strokeWidth}}
-        //         strokeLinecap={${strokeLinecap}}
-        //         strokeLinejoin={${strokeLinejoin}}
-        //     >
-        // `);
-    }
+    const copyHandle = useCallback((type: string) => {
+        const str = componentToString(type) || '';
+        copyCode(str);
+        if(type === 'svg'){
+            message.success('复制成功');
+        }else{
+            message.success(`复制成功 ：${str}`);
+        }
+    }, [componentToString])
     const footerBtn = useMemo(() => {
         return <>
             <Button type="primary" className={styles.btn} onClick={() => copyHandle('react')}>复制React</Button>
-            <Button className={styles.btn}>复制Vue</Button>
-            <Button className={styles.btn}>复制Svg</Button>
-            <Button>下载Svg</Button>
+            <Button className={styles.btn} onClick={() => copyHandle('vue')}>复制Vue</Button>
+            <Button className={styles.btn} onClick={() => copyHandle('svg')}>复制Svg</Button>
+            <Button onClick={() => downloadSvg(info?.svg,`${info?.name}.svg`)}>下载Svg</Button>
         </>
-    }, [])
+    }, [copyHandle])
     
 
     return (
