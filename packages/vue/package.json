@@ -1,5 +1,5 @@
 {
-  "name": "@okey-icon/vue",
+  "name": "okey-icon-vue",
   "version": "0.0.1",
   "description": "A Vue SVG Icon Library",
   "main": "lib/index.js",
@@ -17,6 +17,12 @@
     "svg",
     "svg icons",
     "components"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "styles",
+    "icons.json"
   ],
   "author": "zsasjy",
   "license": "ISC",

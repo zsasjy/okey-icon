@@ -3,17 +3,15 @@
 */
 import fs, { writeFileSync } from 'fs';
 import path from 'path';
-import mkdirp from 'mkdirp';
 import consola from 'consola';
-import chalk from 'chalk';
 import { promisify } from 'util';
 import { transforms, name2humps } from './utils'
 
 // 1. 先检验source中svg 是否有重复名称的、svg名称是否合规(由字母组成允许有_、-等)、如果都OK进入第二步
 // 2. 将source中svg文件名称与react、vue等目录中的svg图片的tsx文件 进行比对没有则生成、有则跳过
 
-const readFile = promisify(fs.readFile);
 const readDir = promisify(fs.readdir);
+const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
 const SvgIconAll: Record<string , [string, string]> = {};
@@ -94,8 +92,26 @@ const converter = async (name: PackageName) => {
     }
 }
 
+async function createIconJson() {
+    const createPath = path.resolve(__dirname, '../source/all-icon.json');
+    const configPath = path.resolve(__dirname, '../source/config.json')
+    const iconConfig = await readFile(configPath,'utf-8');
+    const iconJson = JSON.parse(iconConfig);
+    const configJson = Object.keys(SvgIconAll).map((fileName,index) => {
+        return {
+            id: index,
+            name: fileName,
+            title: iconJson[fileName],
+            componentName: name2humps(fileName),
+            svg: SvgIconAll[fileName][1],
+        }
+    })
+    await writeFile(createPath, JSON.stringify(configJson) ,'utf-8');
+}
+
 async function compiler () {
     const valid = await validtorSvgIconName();
+    await createIconJson();
     if(valid){
         packageName.forEach(p => {
             converter(p);

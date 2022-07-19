@@ -57,15 +57,14 @@ function build(name: 'react' | 'vue' | 'svg' | 'vue3'): string {
         ]);
     });
     // 暂不需要编译icons-json文件()
-    // gulp.task('build-copy-icons-json-' + name, () => {
-    //     return gulp
-    //         .src(resolve('source/icon-config.json'))
-    //         .pipe(rename('icons.json'))
-    //         .pipe(gulp.dest(cwd));
-    // });
-    // const tasks = ['build-script-' + name, 'build-copy-icons-json-' + name];
+    gulp.task('build-copy-icons-json-' + name, () => {
+        return gulp
+            .src(resolve('source/all-icon.json'))
+            .pipe(rename('icons.json'))
+            .pipe(gulp.dest(cwd));
+    });
+    const tasks = ['build-script-' + name, 'build-copy-icons-json-' + name];
 
-    const tasks = ['build-script-' + name];
     if(name !== 'svg'){
         // 处理css
         gulp.task('build-css-' + name, () => {

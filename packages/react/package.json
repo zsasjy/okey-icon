@@ -20,7 +20,8 @@
   "files": [
     "es",
     "lib",
-    "styles"
+    "styles",
+    "icons.json"
   ],
   "publishConfig": {
     "access": "public"
