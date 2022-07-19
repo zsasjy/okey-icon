@@ -20,7 +20,7 @@
     "node_modules",
     "lib",
     "es",
-    "dist",
+    "../dist",
     "typings",
     "**/__test__",
     "test",
