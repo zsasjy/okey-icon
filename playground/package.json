@@ -4,7 +4,8 @@
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "deploy": "gh-pages -d dist"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -34,6 +35,7 @@
   },
   "dependencies": {
     "antd": "^4.21.6",
+    "gh-pages": "^4.0.0",
     "react-color": "^2.19.3"
   }
 }

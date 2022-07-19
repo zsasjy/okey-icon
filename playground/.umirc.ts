@@ -3,7 +3,8 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   title: 'Okey Icon',
   mode: 'site',
-  base: "/",
+  base: "/okey-icon/",
+  publicPath: "/okey-icon/",
   locales: [['zh-CN', '中文']],
   logo: "/images/playgame.png",
   // more config: https://d.umijs.org/config
