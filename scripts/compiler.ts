@@ -33,8 +33,8 @@ const validtorSvgIconName = async (): Promise<boolean> => {
                 return false;
             }
             // 判断名称是否正确
-            if(!(/^([a-z]+)(-|_)?([a-z]+)$/.test(bname))) {
-                consola.error(`${name}文件名称建议使用小字母 ${svgPath}`);
+            if (path.extname(name) !== '.svg') {
+                consola.error(`${name}非svg图标： ${svgPath}`);
                 return false;
             }
             SvgIconAll[bname] = [svgPath, fs.readFileSync(svgPath, 'utf8')];

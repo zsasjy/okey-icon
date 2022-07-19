@@ -1,0 +1,13 @@
+import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
+
+export default SvgIconWrapper('chart-histogram-one', false, (h: IconHelper, props: ISvgIconProps) => (
+    <svg fill="none" viewBox="0 0 48 48">
+        <path
+            stroke={props.colors[0]}
+            d="M6 6v36h36M18 34h-4M26 26H14M42 18H14M34 10H14"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+    </svg>
+));

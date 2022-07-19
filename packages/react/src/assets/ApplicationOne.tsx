@@ -1,0 +1,20 @@
+import React from 'react';
+import { ISvgIconProps, SvgIconWrapper } from '../components';
+
+export default SvgIconWrapper('application-one', false, (props: ISvgIconProps) => (
+    <svg fill="none" viewBox="0 0 48 48">
+        <path
+            stroke={props.colors[0]}
+            d="M41 14 24 4 7 14v20l17 10 17-10V14Z"
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            stroke={props.colors[0]}
+            d="M16 18.998 23.993 24l8.002-5.002M24 24v9"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+    </svg>
+));
