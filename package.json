@@ -5,7 +5,8 @@
     "build": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
     "compile": "ts-node ./scripts/compiler.ts",
     "changeset": "changeset add",
-    "start": "pnpm run -C playground start"
+    "start": "pnpm run -C playground start",
+    "build:site": "pnpm run -C playground build"
   },
   "workspaces": [
     "packages/**"
