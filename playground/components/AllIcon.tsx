@@ -21,6 +21,7 @@ export interface IconProps {
     title: string,
     name: string,
     svg: string,
+    componentName: string,
     component: (info?: IIcon) => JSX.Element,
 }
 
