@@ -39,7 +39,7 @@ export default SvgIconWrapper('movie', false, (h: IconHelper, props: ISvgIconPro
         />
         <path
             d="M24 44H44"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />

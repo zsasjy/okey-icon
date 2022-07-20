@@ -16,7 +16,7 @@ export default SvgIconWrapper('calendar-dot', false, (h: IconHelper, props: ISvg
         />
         <path
             d="M4 14H44"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
@@ -33,63 +33,63 @@ export default SvgIconWrapper('calendar-dot', false, (h: IconHelper, props: ISvg
         />
         <path
             d="M12 22H16"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M22 22H26"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M32 22H36"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M12 29H16"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M22 29H26"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M32 29H36"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M12 36H16"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M22 36H26"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M32 36H36"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

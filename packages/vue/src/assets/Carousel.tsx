@@ -19,29 +19,29 @@ export default SvgIconWrapper('carousel', false, (h: IconHelper, props: ISvgIcon
         <path
             d="M44 17H36V29H44"
             stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M4 17H12V29H4"
             stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M4 13V33"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M44 13V33"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
     </svg>

@@ -11,20 +11,20 @@ export default SvgIconWrapper('calendar', false, (h: IconHelper, props: ISvgIcon
         />
         <path
             d="M5 9C5 7.89543 5.89543 7 7 7H41C42.1046 7 43 7.89543 43 9V19H5V9Z"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M16 4V12"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M32 4V12"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

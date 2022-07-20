@@ -16,7 +16,7 @@ export default SvgIconWrapper('calendar-thirty-two', false, (h: IconHelper, prop
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M28 20V34H36V20H28Z"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
@@ -37,14 +37,14 @@ export default SvgIconWrapper('calendar-thirty-two', false, (h: IconHelper, prop
         />
         <path
             d="M12 20H20V34H12"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M20 27H14"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

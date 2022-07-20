@@ -27,7 +27,7 @@ export default SvgIconWrapper('wallet', false, (h: IconHelper, props: ISvgIconPr
         />
         <path
             d="M44 16.5V40.5"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />

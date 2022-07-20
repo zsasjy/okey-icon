@@ -2,7 +2,7 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('volume-mute', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
-        <rect opacity="0.01" x="30" y="18" width="13" height="13" fill={props.colors[0]} />
+        <rect opacity="0.01" x="30" y="18" width="13" height="13" fill={props.colors[2]} />
         <mask
             id="icon-9072259e6a0e536"
             maskUnits="userSpaceOnUse"
@@ -10,9 +10,9 @@ export default SvgIconWrapper('volume-mute', false, (h: IconHelper, props: ISvgI
             y="18"
             width="13"
             height="13"
-            style="mask-type: alpha"
+            style={{maskType:"alpha"}}
         >
-            <rect x="30" y="18" width="13" height="13" fill={props.colors[0]} />
+            <rect x="30" y="18" width="13" height="13" fill={props.colors[2]} />
         </mask>
         <g mask="url(#icon-9072259e6a0e536)">
             <path

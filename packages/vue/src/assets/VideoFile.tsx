@@ -12,7 +12,7 @@ export default SvgIconWrapper('video-file', false, (h: IconHelper, props: ISvgIc
         />
         <path
             d="M30 4L40 14"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

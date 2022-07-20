@@ -19,7 +19,7 @@ export default SvgIconWrapper('home', false, (h: IconHelper, props: ISvgIconProp
         />
         <path
             d="M9 42H39"
-            stroke={props.colors[2]}
+            stroke={props.colors[3]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />

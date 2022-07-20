@@ -38,8 +38,8 @@ export default SvgIconWrapper('certificate', false, (h: IconHelper, props: ISvgI
         />
         <path
             d="M30 40L34 42V31.4722C34 31.4722 32.8594 33 30 33C27.1406 33 26 31.5 26 31.5V42L30 40Z"
-            fill={props.colors[3]}
-            stroke={props.colors[2]}
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

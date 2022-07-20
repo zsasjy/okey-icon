@@ -25,7 +25,7 @@ export default SvgIconWrapper('zoom-in', false, (h: IconHelper, props: ISvgIconP
         />
         <path
             d="M33.2216 33.2217L41.7069 41.707"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

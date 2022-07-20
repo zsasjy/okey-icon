@@ -33,8 +33,8 @@ export default SvgIconWrapper('checklist', false, (h: IconHelper, props: ISvgIco
         />
         <path
             d="M26 30H4V38H26V30Z"
-            fill={props.colors[3]}
-            stroke={props.colors[2]}
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

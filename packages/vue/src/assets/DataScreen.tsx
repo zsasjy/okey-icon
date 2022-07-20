@@ -23,7 +23,7 @@ export default SvgIconWrapper('data-screen', false, (h: IconHelper, props: ISvgI
         />
         <path
             d="M32 14L16 28"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
@@ -39,8 +39,8 @@ export default SvgIconWrapper('data-screen', false, (h: IconHelper, props: ISvgI
             cx="15"
             cy="17"
             r="3"
-            fill={props.colors[1]}
-            stroke={props.colors[0]}
+            fill={props.colors[3]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
@@ -49,8 +49,8 @@ export default SvgIconWrapper('data-screen', false, (h: IconHelper, props: ISvgI
             cx="33"
             cy="25"
             r="3"
-            fill={props.colors[1]}
-            stroke={props.colors[0]}
+            fill={props.colors[3]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

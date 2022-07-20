@@ -15,14 +15,14 @@ export default SvgIconWrapper('terminal', false, (h: IconHelper, props: ISvgIcon
         />
         <path
             d="M12 18L19 24L12 30"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M23 32H36"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

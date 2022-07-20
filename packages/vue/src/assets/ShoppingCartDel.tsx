@@ -30,7 +30,7 @@ export default SvgIconWrapper('shopping-cart-del', false, (h: IconHelper, props:
         />
         <path
             d="M22 22H30"
-            stroke={props.colors[0]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

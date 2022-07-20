@@ -27,7 +27,7 @@ export default SvgIconWrapper('toxins', false, (h: IconHelper, props: ISvgIconPr
         />
         <path
             d="M22 34.0002L24.9379 31.0002L28 33.8965"
-            stroke={props.colors[2]}
+            stroke={props.colors[3]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

@@ -18,14 +18,14 @@ export default SvgIconWrapper('at-sign', false, (h: IconHelper, props: ISvgIconP
         />
         <path
             d="M32 24C32 27.3137 34.6863 30 38 30V30C41.3137 30 44 27.3137 44 24"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M32 25V16"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

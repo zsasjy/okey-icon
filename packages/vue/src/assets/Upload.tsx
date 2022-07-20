@@ -9,7 +9,7 @@ export default SvgIconWrapper('upload', false, (h: IconHelper, props: ISvgIconPr
             y="0"
             width="48"
             height="48"
-            style="mask-type: alpha"
+            style={{maskType:"alpha"}}
         >
             <path d="M48 0H0V48H48V0Z" fill={props.colors[0]} />
         </mask>

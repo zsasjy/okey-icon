@@ -39,7 +39,7 @@ export default SvgIconWrapper('table-file', false, (h: IconHelper, props: ISvgIc
         />
         <path
             d="M44 8V40C44 41.1046 43.1046 42 42 42H6C4.89543 42 4 41.1046 4 40V8"
-            stroke={props.colors[2]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

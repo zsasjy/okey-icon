@@ -11,48 +11,48 @@ export default SvgIconWrapper('two-dimensional-code-one', false, (h: IconHelper,
         />
         <path
             d="M18 30H6V42H18V30Z"
-            fill={props.colors[3]}
-            stroke={props.colors[2]}
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M42 30H30V42H42V30Z"
-            fill={props.colors[3]}
-            stroke={props.colors[2]}
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M42 6H30V18H42V6Z"
-            fill={props.colors[3]}
-            stroke={props.colors[2]}
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M24 6V24"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
         />
         <path
             d="M24 30V42"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
         />
         <path
             d="M24 24L6 24"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
         />
         <path
             d="M42 24H30"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
         />
     </svg>
 ));

@@ -18,8 +18,8 @@ export default SvgIconWrapper('pig', false, (h: IconHelper, props: ISvgIconProps
             strokeWidth={props.strokeWidth}
         />
         <circle cx="17" cy="18" r="2" fill={props.colors[0]} />
-        <circle cx="21" cy="29" r="2" fill={props.colors[0]} />
+        <circle cx="21" cy="29" r="2" fill={props.colors[2]} />
         <circle cx="31" cy="18" r="2" fill={props.colors[0]} />
-        <circle cx="27" cy="29" r="2" fill={props.colors[0]} />
+        <circle cx="27" cy="29" r="2" fill={props.colors[2]} />
     </svg>
 ));

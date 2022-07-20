@@ -16,100 +16,160 @@ export default SvgIconWrapper('cpu', false, (h: IconHelper, props: ISvgIconProps
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9092 2V8V2Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M14.9092 2V8V2Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M14.9092 2V8"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9092 40V46V40Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M14.9092 40V46V40Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M14.9092 40V46"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 2V8V2Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M24 2V8V2Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M24 2V8"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 40V46V40Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M24 40V46V40Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M24 40V46"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0908 2V8V2Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M33.0908 2V8V2Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M33.0908 2V8"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0908 40V46V40Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M33.0908 40V46V40Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M33.0908 40V46"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 14.9092H8H2Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M2 14.9092H8H2Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M2 14.9092H8"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 14.9092H46H40Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M40 14.9092H46H40Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M40 14.9092H46"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 24H8H2Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M2 24H8H2Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M2 24H8"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 24H46H40Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M40 24H46H40Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M40 24H46"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 33.0908H8H2Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M2 33.0908H8H2Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M2 33.0908H8"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 33.0908H46H40Z" fill={props.colors[3]} />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M40 33.0908H46H40Z"
+            fill={props.colors[1]}
+        />
         <path
             d="M40 33.0908H46"
-            stroke={props.colors[2]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
             strokeLinejoin={props.strokeLinejoin}
         />
     </svg>
