@@ -1,3 +1,5 @@
+import React from 'react';
+import { VNode } from 'vue';
 import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('calendar-three', false, (h: IconHelper, props: ISvgIconProps) => (
@@ -78,4 +80,4 @@ export default SvgIconWrapper('calendar-three', false, (h: IconHelper, props: IS
             strokeLinejoin={props.strokeLinejoin}
         />
     </svg>
-));
+)  as any as VNode);

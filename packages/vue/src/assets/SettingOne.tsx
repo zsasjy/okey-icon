@@ -1,3 +1,5 @@
+import React from 'react';
+import { VNode } from 'vue';
 import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('setting-one', false, (h: IconHelper, props: ISvgIconProps) => (
@@ -7,4 +9,4 @@ export default SvgIconWrapper('setting-one', false, (h: IconHelper, props: ISvgI
             fill={props.colors[0]}
         />
     </svg>
-));
+)  as any as VNode);

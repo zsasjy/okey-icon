@@ -1,3 +1,5 @@
+import React from 'react';
+import { VNode } from 'vue';
 import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('face-recognition', false, (h: IconHelper, props: ISvgIconProps) => (
@@ -21,4 +23,4 @@ export default SvgIconWrapper('face-recognition', false, (h: IconHelper, props: 
             strokeWidth={props.strokeWidth}
         />
     </svg>
-));
+)  as any as VNode);

@@ -1,3 +1,5 @@
+import React from 'react';
+import { VNode } from 'vue';
 import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('corner-up-right', false, (h: IconHelper, props: ISvgIconProps) => (
@@ -17,4 +19,4 @@ export default SvgIconWrapper('corner-up-right', false, (h: IconHelper, props: I
             strokeLinejoin={props.strokeLinejoin}
         />
     </svg>
-));
+)  as any as VNode);

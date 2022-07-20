@@ -1,3 +1,5 @@
+import React from 'react';
+import { VNode } from 'vue';
 import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('add-text', false, (h: IconHelper, props: ISvgIconProps) => (
@@ -27,4 +29,4 @@ export default SvgIconWrapper('add-text', false, (h: IconHelper, props: ISvgIcon
             strokeWidth={props.strokeWidth}
         />
     </svg>
-));
+) as any as VNode);
