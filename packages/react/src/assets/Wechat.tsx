@@ -2,7 +2,7 @@ import React from 'react';
 import { ISvgIconProps, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('wechat', false, (props: ISvgIconProps) => (
-    <svg fill="none" viewBox="0 0 48 48">
+    <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
             d="M36.997 21.711C36.843 13.008 29.74 6 21 6 12.163 6 5 13.163 5 22c0 4.17 1.595 7.968 4.209 10.815l-1.199 7.21 7.115-3.055c3.135 1.042 6.093 1.303 8.875.782"
             clip-rule="evenodd"

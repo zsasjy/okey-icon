@@ -1,7 +1,7 @@
 import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('thumbs-down', false, (h: IconHelper, props: ISvgIconProps) => (
-    <svg fill="none" viewBox="0 0 48 48">
+    <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
             stroke={props.colors[0]}
             d="M20.38 29.4v7.2a5.4 5.4 0 0 0 5.4 5.4l7.2-16.2V6H12.062a3.6 3.6 0 0 0-3.6 3.06L5.98 25.26a3.6 3.6 0 0 0 3.6 4.14h10.8Z"

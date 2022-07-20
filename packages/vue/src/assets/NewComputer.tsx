@@ -1,7 +1,7 @@
 import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('new-computer', false, (h: IconHelper, props: ISvgIconProps) => (
-    <svg fill="none" viewBox="0 0 48 48">
+    <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <rect
             stroke={props.colors[0]}
             rx="3"

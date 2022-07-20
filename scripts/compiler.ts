@@ -53,7 +53,7 @@ const validtorSvgIconName = async (): Promise<boolean> => {
                     !result && resolve(result);
                 })
             }
-            const result =  validSvgName(fileOrDir,sourceDir);
+            const result = validSvgName(fileOrDir,sourceDir);
             !result && resolve(result);
             if(svgFileOrDirList[svgFileOrDirList.length - 1] === fileOrDir){
                 resolve(true)
@@ -68,12 +68,12 @@ const converter = async (name: PackageName) => {
         const assetsPaths = path.resolve('packages',name,'src/assets/');
         const indexPaths = path.resolve('packages',name, 'src/index.ts');
         const svgTsxList = await (await readDir(assetsPaths)).reduce((prev, cur: string) => {
-            prev[path.basename(cur,'.tsx').toLocaleLowerCase()] = true;
+            prev[name2humps(path.basename(cur,'.tsx')).toLocaleLowerCase()] = true;
             return prev;
         }, {} as Record<string, boolean>);
         Object.keys(SvgIconAll).forEach(async (file, index) => {
             const filename = name2humps(file)
-            if(!svgTsxList[file]){
+            if(!svgTsxList[filename.toLocaleLowerCase()]){
                 consola.info(`开始编译${name}Svg : ${filename}`);
                 const svgString = SvgIconAll[file][1];
                 const svgContent = transforms[`${name}`](svgString, file);
@@ -106,7 +106,7 @@ async function createIconJson() {
             svg: SvgIconAll[fileName][1],
         }
     })
-    await writeFile(createPath, JSON.stringify(configJson) ,'utf-8');
+    await writeFile(createPath, JSON.stringify(configJson, undefined ,2) ,'utf-8');
 }
 
 async function compiler () {

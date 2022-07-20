@@ -2,7 +2,7 @@ import React from 'react';
 import { ISvgIconProps, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('switch-button', false, (props: ISvgIconProps) => (
-    <svg fill="none" viewBox="0 0 48 48">
+    <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
             stroke={props.colors[0]}
             d="M36 4H12a8 8 0 1 0 0 16h24a8 8 0 1 0 0-16ZM36 28H12a8 8 0 1 0 0 16h24a8 8 0 1 0 0-16Z"

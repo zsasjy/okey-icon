@@ -1,7 +1,8 @@
-import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
+import React from 'react';
+import { ISvgIconProps, SvgIconWrapper } from '../components';
 
-export default SvgIconWrapper('github ', false, (h: IconHelper, props: ISvgIconProps) => (
-    <svg fill="none" viewBox="0 0 48 48">
+export default SvgIconWrapper('github', false, (props: ISvgIconProps) => (
+    <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
             fill={props.colors[0]}
             d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4ZM0 24C0 10.745 10.745 0 24 0s24 10.745 24 24-10.745 24-24 24S0 37.255 0 24Z"

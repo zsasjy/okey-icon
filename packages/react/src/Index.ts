@@ -1,9 +1,10 @@
 export {IconProvider, DEFAULT_ICON_CONFIGS} from './components';
 
-export {default as Setting} from './assets/Setting';
+
 export {default as Avatar} from './assets/Avatar';
 export {default as CollectionFiles} from './assets/CollectionFiles';
 export {default as SettingOne} from './assets/SettingOne';
+export {default as Setting} from './assets/Setting';
 export {default as AddMode} from './assets/AddMode';
 export {default as AddOne} from './assets/AddOne';
 export {default as AddPicture} from './assets/AddPicture';
@@ -127,7 +128,7 @@ export {default as Fire} from './assets/Fire';
 export {default as Format} from './assets/Format';
 export {default as FullScreenOne} from './assets/FullScreenOne';
 export {default as FullScreenTwo} from './assets/FullScreenTwo';
-export {default as Github } from './assets/Github ';
+export {default as Github} from './assets/Github';
 export {default as GoodTwo} from './assets/GoodTwo';
 export {default as GridThree} from './assets/GridThree';
 export {default as GrinningFaceWithOpenMouth} from './assets/GrinningFaceWithOpenMouth';

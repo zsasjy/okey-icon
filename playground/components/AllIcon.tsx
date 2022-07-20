@@ -18,7 +18,7 @@ export interface IIcon {
 
 export interface IconProps {
     id: number
-    title: string,
+    title?: string,
     name: string,
     svg: string,
     componentName: string,

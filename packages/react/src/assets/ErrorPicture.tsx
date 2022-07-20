@@ -2,7 +2,7 @@ import React from 'react';
 import { ISvgIconProps, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('error-picture', false, (props: ISvgIconProps) => (
-    <svg fill="none" viewBox="0 0 48 48">
+    <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
             fill={props.colors[0]}
             d="M44 23.994a2 2 0 0 0-4 0h4Zm-20-16a2 2 0 1 0 0-4v4Zm15 32H9v4h30v-4Zm-31-1v-30H4v30h4Zm32-15v15h4v-15h-4Zm-31-16h15v-4H9v4Zm0 32a1 1 0 0 1-1-1H4a5 5 0 0 0 5 5v-4Zm30 4a5 5 0 0 0 5-5h-4a1 1 0 0 1-1 1v4Zm-31-35a1 1 0 0 1 1-1v-4a5 5 0 0 0-5 5h4Z"
