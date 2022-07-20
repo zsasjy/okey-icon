@@ -1,6 +1,6 @@
 {
   "name": "okey-icon-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A React SVG Icon Library",
   "main": "lib/index.js",
   "module": "es/index.js",

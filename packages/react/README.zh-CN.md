@@ -1,6 +1,6 @@
 # Okey-Icon
 
-[英文](./README.zh-CN.md)
+[英文](./README.md) ，仅用于学习Svg 与 npm发包流程、参考IconPark
 
 ## 安装
 
