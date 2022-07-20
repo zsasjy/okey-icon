@@ -1,6 +1,6 @@
 {
   "name": "okey-icon-react",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A React SVG Icon Library",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -26,6 +26,8 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": "https://github.com/zsasjy/okey-icon",
+  "homepage": "https://zsasjy.github.io/okey-icon/",
   "peerDependencies": {
     "@types/react": ">=16.0.0",
     "@types/react-dom": ">=16.0.0",
