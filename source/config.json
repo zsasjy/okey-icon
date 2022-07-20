@@ -85,6 +85,7 @@
     "email-fail":"邮件发送失败",
     "error-picture":"图片错误",
     "file-collection":"收藏文件",
+    "file-collection-one":"收藏文件1",
     "file-zip":"压缩文件",
     "file-txt":"txt文件",
     "log":"日志",
@@ -265,5 +266,7 @@
     "carousel": "轮播",
     "network-tree": "网络节点",
     "connection-point": "连接点",
-    "branch-one": "分支"
+    "branch-one": "分支",
+    "level": "级别",
+    "html5":"html5"
 }

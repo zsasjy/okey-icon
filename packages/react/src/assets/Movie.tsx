@@ -20,29 +20,29 @@ export default SvgIconWrapper('movie', false, (props: ISvgIconProps) => (
         <path
             d="M24 36C25.6569 36 27 34.6569 27 33C27 31.3431 25.6569 30 24 30C22.3431 30 21 31.3431 21 33C21 34.6569 22.3431 36 24 36Z"
             fill={props.colors[3]}
-            stroke={props.colors[3]}
+            stroke={props.colors[2]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M15 27C16.6569 27 18 25.6569 18 24C18 22.3431 16.6569 21 15 21C13.3431 21 12 22.3431 12 24C12 25.6569 13.3431 27 15 27Z"
             fill={props.colors[3]}
-            stroke={props.colors[3]}
+            stroke={props.colors[2]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M33 27C34.6569 27 36 25.6569 36 24C36 22.3431 34.6569 21 33 21C31.3431 21 30 22.3431 30 24C30 25.6569 31.3431 27 33 27Z"
             fill={props.colors[3]}
-            stroke={props.colors[3]}
+            stroke={props.colors[2]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
             d="M24 44H44"
-            stroke={props.colors[3]}
-            strokeLinecap={props.strokeLinecap}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
+            strokeLinecap={props.strokeLinecap}
         />
     </svg>
 ));

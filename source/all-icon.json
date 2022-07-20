@@ -793,6 +793,7 @@
   {
     "id": 113,
     "name": "file-collection-one",
+    "title": "收藏文件1",
     "componentName": "FileCollectionOne",
     "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M40 23V14L31 4H10C8.89543 4 8 4.89543 8 6V42C8 43.1046 8.89543 44 10 44H22\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n    <path d=\"M30.85 30C28.7237 30 27 32.0086 27 34.4864C27 38.9727 31.55 43.0513 34 44C36.45 43.0513 41 38.9727 41 34.4864C41 32.0086 39.2763 30 37.15 30C35.8479 30 34.6967 30.7533 34 31.9062C33.3033 30.7533 32.1521 30 30.85 30Z\" fill=\"#2F88FF\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n    <path d=\"M30 4V14H40\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>"
   },
@@ -946,6 +947,7 @@
   {
     "id": 135,
     "name": "html5",
+    "title": "html5",
     "componentName": "Html5",
     "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M37.8037 5H10.1963C9.01796 5 8.09502 6.01352 8.205 7.18668L10.8925 35.8534C10.959 36.5632 11.3984 37.1839 12.0457 37.4826L23.1619 42.6132C23.6937 42.8586 24.3063 42.8586 24.8381 42.6132L35.9543 37.4826C36.6016 37.1839 37.041 36.5632 37.1075 35.8534L39.795 7.18668C39.905 6.01352 38.982 5 37.8037 5Z\" fill=\"#2F88FF\" stroke=\"#000000\" stroke-width=\"4\"/>\n    <path d=\"M32 12H16L17 21H31L30 32L24 35L18 32L17.5 27\" stroke=\"#FFF\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>"
   },
@@ -987,6 +989,7 @@
   {
     "id": 141,
     "name": "level",
+    "title": "级别",
     "componentName": "Level",
     "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M24 42L4 18.5L9.69488 6L38.3051 6L44 18.5L24 42Z\" fill=\"#2F88FF\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n    <path d=\"M32 18L24 27L16 18\" stroke=\"#FFF\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>"
   },
