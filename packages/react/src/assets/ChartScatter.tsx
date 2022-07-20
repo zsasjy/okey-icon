@@ -4,17 +4,35 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('chart-scatter', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
+            d="M6 6V42H42"
             stroke={props.colors[0]}
-            d="M6 6v36h36"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
-            fill={props.colors[0]}
-            d="M20 24a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM37 16a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM15 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM33 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-            clip-rule="evenodd"
             fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M20 24C22.2091 24 24 22.2091 24 20C24 17.7909 22.2091 16 20 16C17.7909 16 16 17.7909 16 20C16 22.2091 17.7909 24 20 24Z"
+            fill={props.colors[0]}
+        />
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M37 16C39.7614 16 42 13.7614 42 11C42 8.23858 39.7614 6 37 6C34.2386 6 32 8.23858 32 11C32 13.7614 34.2386 16 37 16Z"
+            fill={props.colors[0]}
+        />
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15 36C16.6569 36 18 34.6569 18 33C18 31.3431 16.6569 30 15 30C13.3431 30 12 31.3431 12 33C12 34.6569 13.3431 36 15 36Z"
+            fill={props.colors[0]}
+        />
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M33 32C34.6569 32 36 30.6569 36 29C36 27.3431 34.6569 26 33 26C31.3431 26 30 27.3431 30 29C30 30.6569 31.3431 32 33 32Z"
+            fill={props.colors[0]}
         />
     </svg>
 ));

@@ -3,15 +3,17 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('chart-pie', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
+            d="M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4V24H44Z"
+            fill={props.colors[1]}
             stroke={props.colors[0]}
-            d="M44 24c0 11.046-8.954 20-20 20S4 35.046 4 24 12.954 4 24 4v20h20Z"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
-            stroke={props.colors[0]}
-            d="M43.084 18H30V4.916A20.047 20.047 0 0 1 43.084 18Z"
+            d="M43.0844 18H30V4.91553C36.2202 6.86917 41.1308 11.7798 43.0844 18Z"
+            fill={props.colors[3]}
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

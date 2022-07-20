@@ -107,14 +107,16 @@ async function createIconJson() {
         }
     })
     await writeFile(createPath, JSON.stringify(configJson, undefined ,2) ,'utf-8');
+    consola.success("已生成icons.json");
 }
 
 async function compiler () {
     const valid = await validtorSvgIconName();
     await createIconJson();
     if(valid){
-        packageName.forEach(p => {
-            converter(p);
+        packageName.forEach(async p => {
+            await converter(p);
+            consola.success(`${p} Svg组件编译结束`);
         })
     }
 }

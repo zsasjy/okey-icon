@@ -4,24 +4,38 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('upload', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <mask
-            style={{maskType:"alpha"}}
-            height={props.size}
-            width={props.size}
-            y="0"
-            x="0"
+            id="icon-171a76f7f10b972"
             maskUnits="userSpaceOnUse"
-            id="a"
+            x="0"
+            y="0"
+            width="48"
+            height="48"
+            style={{maskType:"alpha"}}
         >
-            <path fill={props.colors[0]} d="M48 0H0v48h48V0Z" />
+            <path d="M48 0H0V48H48V0Z" fill={props.colors[0]} />
         </mask>
-        <g
-            mask="url(#a)"
-            stroke={props.colors[0]}
-            strokeLinecap={props.strokeLinecap}
-            strokeWidth={props.strokeWidth}
-            strokeLinejoin={props.strokeLinejoin}
-        >
-            <path d="M6 24.008V42h36V24M33 15l-9-9-9 9M23.992 32V6" />
+        <g mask="url(#icon-171a76f7f10b972)">
+            <path
+                d="M6 24.0083V42H42V24"
+                stroke={props.colors[0]}
+                strokeLinecap={props.strokeLinecap}
+                strokeWidth={props.strokeWidth}
+                strokeLinejoin={props.strokeLinejoin}
+            />
+            <path
+                d="M33 15L24 6L15 15"
+                stroke={props.colors[0]}
+                strokeLinecap={props.strokeLinecap}
+                strokeWidth={props.strokeWidth}
+                strokeLinejoin={props.strokeLinejoin}
+            />
+            <path
+                d="M23.9917 32V6"
+                stroke={props.colors[0]}
+                strokeLinecap={props.strokeLinecap}
+                strokeWidth={props.strokeWidth}
+                strokeLinejoin={props.strokeLinejoin}
+            />
         </g>
     </svg>
 ));

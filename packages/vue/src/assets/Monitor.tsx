@@ -2,23 +2,28 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('monitor', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
-        <path
+        <rect
+            x="4"
+            y="10"
+            width="32"
+            height="28"
+            fill={props.colors[1]}
             stroke={props.colors[0]}
-            d="M4 10h32v28H4z"
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
-            stroke={props.colors[0]}
-            d="m44 14-8 6.75v6.5L44 34V14Z"
+            fill-rule="evenodd"
             clip-rule="evenodd"
+            d="M44 14L36 20.75V27.25L44 34V14Z"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M17 19L23 24L17 29"
             stroke={props.colors[0]}
-            d="m17 19 6 5-6 5"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

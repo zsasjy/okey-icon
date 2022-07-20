@@ -3,16 +3,67 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('network-tree', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
-        <path
+        <rect
+            x="4"
+            y="34"
+            width="8"
+            height="8"
+            fill={props.colors[1]}
             stroke={props.colors[0]}
-            d="M4 34h8v8H4zM8 6h32v12H8zM24 34V18"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <rect
+            x="8"
+            y="6"
+            width="32"
+            height="12"
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M24 34V18"
             stroke={props.colors[0]}
-            d="M8 34v-8h32v8M36 34h8v8h-8zM20 34h8v8h-8zM14 12h2"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M8 34V26H40V34"
+            stroke={props.colors[0]}
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <rect
+            x="36"
+            y="34"
+            width="8"
+            height="8"
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <rect
+            x="20"
+            y="34"
+            width="8"
+            height="8"
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M14 12H16"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

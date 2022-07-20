@@ -6,8 +6,8 @@ export default SvgIconWrapper('page', false, (props: ISvgIconProps) => (
         <rect
             stroke={props.colors[0]}
             rx="3"
-            height={props.size}
-            width={props.size}
+            height="36"
+            width="36"
             y="6"
             x="6"
             strokeWidth={props.strokeWidth}

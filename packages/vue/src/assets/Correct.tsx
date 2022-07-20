@@ -3,9 +3,11 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('correct', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
-            stroke={props.colors[0]}
-            d="m4 24 5-5 10 10L39 9l5 5-25 25L4 24Z"
+            fill-rule="evenodd"
             clip-rule="evenodd"
+            d="M4 24L9 19L19 29L39 9L44 14L19 39L4 24Z"
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

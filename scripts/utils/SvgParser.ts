@@ -40,8 +40,8 @@ export class SvgParser {
         }
     }
     private replaceAttr(props: {[key: string]: string}, name: string) {
-        if(props.width) props.width = `{props.size}`;
-        if(props.height) props.height = `{props.size}`;
+        if(props.width && name === 'svg') props.width = `{props.size}`;
+        if(props.height && name === 'svg') props.height = `{props.size}`;
         if(props.xmlns) delete props.xmlns;
         if(props['stroke-linecap']) {
             delete props['stroke-linecap'];
@@ -56,7 +56,7 @@ export class SvgParser {
             props['strokeLinejoin'] = `{props.strokeLinejoin}`;
         }
         // 为满足变色 单独处理path样式，非path标签 颜色固定 
-        if(props.stroke) props.stroke = `{props.colors[${ this.lastColorCount }]}`;
+        if(props.stroke) props.stroke = `{props.colors[${ this.lastColorCount > 2 ? 2 : this.lastColorCount }]}`;
         if(props.fill && name !== 'svg') {
             if(name === 'path'){
                 if(props.stroke){
@@ -67,7 +67,7 @@ export class SvgParser {
                     props.fill = `{props.colors[${this.lastColorCount}]}`;
                 }
             }else{
-                props.fill = `{props.colors[${this.lastColorCount + 1}]}`;
+                props.fill = `{props.colors[${props.stroke ? this.lastColorCount + 1 : this.lastColorCount}]}`;
             }
         }
         return props;

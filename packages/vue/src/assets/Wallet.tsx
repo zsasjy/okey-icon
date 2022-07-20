@@ -3,28 +3,31 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('wallet', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
-            stroke={props.colors[0]}
-            d="M17.982 11.969 31.785 4l4.612 7.989-18.415-.02Z"
+            fill-rule="evenodd"
             clip-rule="evenodd"
+            d="M17.982 11.9689L31.7846 4L36.397 11.9889L17.982 11.9689Z"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M4 14C4 12.8954 4.89543 12 6 12H42C43.1046 12 44 12.8954 44 14V42C44 43.1046 43.1046 44 42 44H6C4.89543 44 4 43.1046 4 42V14Z"
+            fill={props.colors[1]}
             stroke={props.colors[0]}
-            d="M4 14a2 2 0 0 1 2-2h36a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V14Z"
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
-            stroke={props.colors[0]}
-            d="M35.25 33H44V23h-8.75c-2.9 0-5.25 2.239-5.25 5s2.35 5 5.25 5Z"
+            d="M35.25 33H44V23H35.25C32.3505 23 30 25.2386 30 28C30 30.7614 32.3505 33 35.25 33Z"
+            fill={props.colors[3]}
+            stroke={props.colors[2]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
-            stroke={props.colors[0]}
-            d="M44 16.5v24"
+            d="M44 16.5V40.5"
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />

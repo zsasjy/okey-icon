@@ -2,23 +2,49 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('calendar-thirty-two', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
-        <path
+        <rect
+            x="4"
+            y="8"
+            width="40"
+            height="36"
+            fill={props.colors[1]}
             stroke={props.colors[0]}
-            d="M4 8h40v36H4z"
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
-            stroke={props.colors[0]}
-            d="M28 20v14h8V20h-8Z"
+            fill-rule="evenodd"
             clip-rule="evenodd"
+            d="M28 20V34H36V20H28Z"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M17 4V12"
             stroke={props.colors[0]}
-            d="M17 4v8M31 4v8M12 20h8v14h-8M20 27h-6"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M31 4V12"
+            stroke={props.colors[0]}
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M12 20H20V34H12"
+            stroke={props.colors[0]}
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M20 27H14"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

@@ -3,10 +3,18 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('remind', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
-        <path d="M24 4c-7.732 0-14 6.268-14 14v20h28V18c0-7.732-6.268-14-14-14Z" />
+        <path d="M24 4C16.268 4 10 10.268 10 18V38H38V18C38 10.268 31.732 4 24 4Z" fill={props.colors[1]} />
         <path
+            d="M10 38V18C10 10.268 16.268 4 24 4C31.732 4 38 10.268 38 18V38M4 38H44"
             stroke={props.colors[0]}
-            d="M10 38V18c0-7.732 6.268-14 14-14s14 6.268 14 14v20M4 38h40M24 44a5 5 0 0 0 5-5v-1H19v1a5 5 0 0 0 5 5Z"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M24 44C26.7614 44 29 41.7614 29 39V38H19V39C19 41.7614 21.2386 44 24 44Z"
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

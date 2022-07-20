@@ -3,18 +3,26 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('voice', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <rect
-            stroke={props.colors[0]}
-            rx="7"
-            height={props.size}
-            width={props.size}
-            y="4"
             x="17"
+            y="4"
+            width="14"
+            height="27"
+            rx="7"
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M9 23C9 31.2843 15.7157 38 24 38C32.2843 38 39 31.2843 39 23"
             stroke={props.colors[0]}
-            d="M9 23c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15M24 38v6"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M24 38V44"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

@@ -4,61 +4,68 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('file-doc', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
+            d="M10 38V44H38V38"
             stroke={props.colors[0]}
-            d="M10 38v6h28v-6M38 20v-6L30 4H10v16"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M38 20V14L30 4H10V20"
             stroke={props.colors[0]}
-            d="M28 4v10h10"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M28 4V14H38"
             stroke={props.colors[0]}
-            d="M16 12h4"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M16 12H20"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />
         <rect
-            stroke={props.colors[0]}
-            rx="2"
-            height={props.size}
-            width={props.size}
-            y="20"
             x="4"
+            y="20"
+            width="40"
+            height="18"
+            rx="2"
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M10 25V33"
             stroke={props.colors[0]}
-            d="M10 25v8"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />
         <path
+            d="M10 25H12C14.2091 25 16 26.7909 16 29V29C16 31.2091 14.2091 33 12 33H10"
             stroke={props.colors[0]}
-            d="M10 25h2a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4h-2"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <ellipse
-            stroke={props.colors[0]}
-            ry="4"
-            rx="3"
-            cy="29"
             cx="24"
+            cy="29"
+            rx="3"
+            ry="4"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M38 25H36C33.7909 25 32 26.7909 32 29V29C32 31.2091 33.7909 33 36 33H38"
             stroke={props.colors[0]}
-            d="M38 25h-2a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4h2"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

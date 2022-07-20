@@ -4,21 +4,29 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('at-sign', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
+            d="M44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44V44C28.9886 44 33.5507 42.1735 37.0539 39.1529"
             stroke={props.colors[0]}
-            d="M44 24c0-11.046-8.954-20-20-20S4 12.954 4 24s8.954 20 20 20v0c4.989 0 9.55-1.827 13.054-4.847"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M24 32C28.4183 32 32 28.4183 32 24C32 19.5817 28.4183 16 24 16C19.5817 16 16 19.5817 16 24C16 28.4183 19.5817 32 24 32Z"
+            fill={props.colors[1]}
             stroke={props.colors[0]}
-            d="M24 32a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M32 24C32 27.3137 34.6863 30 38 30V30C41.3137 30 44 27.3137 44 24"
             stroke={props.colors[0]}
-            d="M32 24a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6M32 25v-9"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M32 25V16"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

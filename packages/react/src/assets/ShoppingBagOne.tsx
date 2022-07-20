@@ -4,18 +4,19 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('shopping-bag-one', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <rect
-            stroke={props.colors[0]}
-            rx="3"
-            height={props.size}
-            width={props.size}
-            y="12"
             x="10"
+            y="12"
+            width="28"
+            height="30"
+            rx="3"
+            fill={props.colors[1]}
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M30 18V10C30 6.68629 27.3137 4 24 4V4C20.6863 4 18 6.68629 18 10V18"
             stroke={props.colors[0]}
-            d="M30 18v-8a6 6 0 0 0-6-6v0a6 6 0 0 0-6 6v8"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

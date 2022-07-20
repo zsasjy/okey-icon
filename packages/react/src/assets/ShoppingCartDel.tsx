@@ -3,35 +3,35 @@ import { ISvgIconProps, SvgIconWrapper } from '../components';
 
 export default SvgIconWrapper('shopping-cart-del', false, (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
-        <path d="M39 32H13L8 12h36l-5 20Z" />
+        <path d="M39 32H13L8 12H44L39 32Z" fill={props.colors[1]} />
         <path
+            d="M3 6H6.5L8 12M8 12L13 32H39L44 12H8Z"
             stroke={props.colors[0]}
-            d="M3 6h3.5L8 12m0 0 5 20h26l5-20H8Z"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <circle
-            stroke={props.colors[0]}
-            r="3"
-            cy="39"
             cx="13"
+            cy="39"
+            r="3"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <circle
-            stroke={props.colors[0]}
-            r="3"
-            cy="39"
             cx="39"
+            cy="39"
+            r="3"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
-            stroke={props.colors[0]}
-            d="M22 22h8"
+            d="M22 22H30"
+            stroke={props.colors[2]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

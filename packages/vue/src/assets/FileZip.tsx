@@ -3,51 +3,64 @@ import { ISvgIconProps, IconHelper, SvgIconWrapper } from '../components';
 export default SvgIconWrapper('file-zip', false, (h: IconHelper, props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
         <path
+            d="M10 38V44H38V38"
             stroke={props.colors[0]}
-            d="M10 38v6h28v-6M38 20v-6L30 4H10v16"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M38 20V14L30 4H10V20"
             stroke={props.colors[0]}
-            d="M28 4v10h10"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M28 4V14H38"
             stroke={props.colors[0]}
-            d="M16 12h4"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+            strokeLinejoin={props.strokeLinejoin}
+        />
+        <path
+            d="M16 12H20"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />
         <rect
-            stroke={props.colors[0]}
-            rx="2"
-            height={props.size}
-            width={props.size}
-            y="20"
             x="4"
+            y="20"
+            width="40"
+            height="18"
+            rx="2"
+            stroke={props.colors[0]}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M11 25H17L11 33H17"
             stroke={props.colors[0]}
-            d="M11 25h6l-6 8h6"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}
         />
         <path
+            d="M24 25V33"
             stroke={props.colors[0]}
-            d="M24 25v8M31 25v8"
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
         />
         <path
+            d="M31 25V33"
             stroke={props.colors[0]}
-            d="M31 25h3.5a2.5 2.5 0 0 1 2.5 2.5v0a2.5 2.5 0 0 1-2.5 2.5H31"
+            strokeLinecap={props.strokeLinecap}
+            strokeWidth={props.strokeWidth}
+        />
+        <path
+            d="M31 25H34.5C35.8807 25 37 26.1193 37 27.5V27.5C37 28.8807 35.8807 30 34.5 30H31"
+            stroke={props.colors[0]}
             strokeLinecap={props.strokeLinecap}
             strokeWidth={props.strokeWidth}
             strokeLinejoin={props.strokeLinejoin}

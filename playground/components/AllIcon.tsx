@@ -41,7 +41,7 @@ function IconInfo (props: IconInfoProps) {
         <>
             <div className={styles.iconitem}>
                 <div className={styles.icon}>
-                    { props.component() }
+                    { props.component({strokeWidth: 3}) }
                 </div>
                 <div className={styles.text}>{props.title}</div>
                 <div className={styles.download} onClick={() => clickHanel()}><Download />下载</div>
