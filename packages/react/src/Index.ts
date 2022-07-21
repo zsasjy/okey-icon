@@ -266,3 +266,8 @@ export {default as Wifi} from './assets/Wifi';
 export {default as WinkingFace} from './assets/WinkingFace';
 export {default as ZoomIn} from './assets/ZoomIn';
 export {default as ZoomOut} from './assets/ZoomOut';
+export {default as QrcodeHalf} from './assets/QrcodeHalf';
+export {default as React} from './assets/React';
+export {default as Vue} from './assets/Vue';
+export {default as Webpack} from './assets/Webpack';
+export {default as LoadingTwo} from './assets/LoadingTwo';

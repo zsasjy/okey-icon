@@ -268,5 +268,10 @@
     "connection-point": "连接点",
     "branch-one": "分支",
     "level": "级别",
-    "html5":"html5"
+    "html5":"html5",
+    "loading-two":"loading2",
+    "react": "react",
+    "vue": "vue",
+    "webpack": "webpack",
+    "qrcode-half": "半二维码"
 }

@@ -1,6 +1,6 @@
 # Okey-Icon
 
-[英文](./README.md) ，仅用于学习Svg 与 npm发包流程、参考IconPark
+仅用于学习Svg 与 npm发包流程、参考IconPark
 
 ## 安装
 
@@ -15,7 +15,7 @@ npm install okey-icon-react
 React 中组件中引入
 
 ```tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Setting } from 'okey-icon-react';
 import "okey-icon-react/styles/index.css";
 
@@ -24,7 +24,7 @@ import "okey-icon-react/styles/index.css";
 
 使图标旋转
 ```tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Setting } from 'okey-icon-react';
   
 <Setting fill="#27CFFF" size={32} theme="outline"/>

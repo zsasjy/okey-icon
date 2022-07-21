@@ -26,8 +26,6 @@ export class SvgParser {
             ),
             'vue' : (content: string) => (
                 `
-                import React from 'react';
-                import { VNode } from 'vue';
                 import {ISvgIconProps, IconHelper, SvgIconWrapper} from '../components';
 
                 export default SvgIconWrapper(
@@ -35,7 +33,7 @@ export class SvgParser {
                     false,
                     (h: IconHelper, props: ISvgIconProps) => (
                         ${content}
-                    ) as any as VNode
+                    )
                 )
                 `
             ),
